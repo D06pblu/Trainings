@@ -36,7 +36,7 @@ public class SingletonSerialisation {
 
         return singleton;
     }
-    private static class Singleton implements Serializable { //класс был public. Разве это правильно? Поменял на private
+    public static class Singleton implements Serializable {
         private static volatile Singleton ourInstance;
         public static Singleton getInstance() {
             if (ourInstance == null) {
@@ -47,7 +47,7 @@ public class SingletonSerialisation {
         private Singleton() {   //объявили приватный конструктор
         }
 
-        private Object readResolve() {
+        private Object CreadResolve() {  //readResolve используется для замены объекта, считанного из потока
             return getInstance();
         }
     }
