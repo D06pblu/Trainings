@@ -1,6 +1,6 @@
 package GoF_Pattrens.Creational.Singleton;
 
-public class SingletonWirthDCL {
+public class SingletonWithDCL {
     public static final class Singleton {      // Поле обязательно должно быть объявлено volatile, чтобы двойная проверка
                                         // блокировки сработала как надо.
         private static volatile Singleton instance;
