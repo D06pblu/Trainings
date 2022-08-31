@@ -9,7 +9,6 @@ public class GlobalCounterThread extends Thread{
         }
     }
 }
-
 class GlobalCounter {
     static int tickCounter;
 
