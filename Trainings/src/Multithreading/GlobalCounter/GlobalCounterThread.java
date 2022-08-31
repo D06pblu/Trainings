@@ -1,6 +1,6 @@
 package Multithreading.GlobalCounter;
 
-public class GlobalCounterThread extends Thread{
+public class GlobalCounterThread extends Thread{        //внес правки в соответствии с ревью
     public void run() {
         for (int i = 0; i < 10; i++) {
             GlobalCounter.tickCounter++;
