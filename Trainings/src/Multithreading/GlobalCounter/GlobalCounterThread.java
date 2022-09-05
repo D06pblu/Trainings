@@ -6,11 +6,12 @@ public class GlobalCounterThread extends Thread{        //внес правки 
             GlobalCounter.tickCounter++;
             System.out.println("Тик номер " + i + " в треде " + GlobalCounterThread.currentThread().getName()
                     + ", а в глобальном счетчике это тик номер " + GlobalCounter.tickCounter);
+            Thread.yield();
         }
     }
 }
 class GlobalCounter {
-    static int tickCounter;
+    static volatile int tickCounter;
 
     public static void main(String[] args) {
         GlobalCounterThread thread01 = new GlobalCounterThread();
